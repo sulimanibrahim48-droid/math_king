@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Develop Math Skills!</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <h1>Develop Math Skills!</h1>
+    </header>
+    <main>
+        <!-- Main Menu -->
+        <div id="main-menu" class="menu-container">
+            <h2>Choose a Game!</h2>
+            <div class="menu-grid">
+                <button class="menu-btn btn-count" onclick="startGame('count')">123</button>
+                <button class="menu-btn btn-add" onclick="startGame('add')">+</button>
+                <button class="menu-btn btn-sub" onclick="startGame('sub')">-</button>
+                <button class="menu-btn btn-mul" onclick="startGame('mul')">×</button>
+                <button class="menu-btn btn-div" onclick="startGame('div')">÷</button>
+            </div>
+        </div>
+
+        <!-- Dynamic Game Board -->
+        <div id="game-board" class="game-container hidden">
+            <button id="back-btn" onclick="showMenu()">← Back</button>
+
+            <section class="game-card" id="active-game-card">
+                <h2 id="game-title" class="game-mode-title"></h2>
+                <div class="game-area">
+                    <!-- Dynamic Equation: [Group 1] [Op] [Group 2] -->
+                    <div class="equation-container" id="equation-display">
+                        <!-- Populated by JS -->
+                    </div>
+
+                    <div class="answer-section">
+                        <span class="equals">=</span>
+                        <div class="answer-slot" id="answer-slot">?</div>
+                    </div>
+                </div>
+                <div class="options-area" id="options-area">
+                    <!-- Options Populated by JS -->
+                </div>
+            </section>
+        </div>
+    </main>
+    <footer>
+        <p>Designed by Ibrahim</p>
+        <div class="qr-container">
+            <p>Scan to Play!</p>
+            <img src="https://api.qrserver.com/v1/create-qr-code/?size=120x120&data=https://sulimanibrahim48-droid.github.io/math_king/"
+                alt="QR Code to Play Math King" class="qr-code">
+        </div>
+    </footer>
+    <script src="main.js"></script>
+</body>
+
+</html>
